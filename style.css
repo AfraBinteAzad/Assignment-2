@@ -5,7 +5,7 @@ html, body {
 }
 
 header, .section1, .section2, .section3 {
-  padding: 50px 150px;
+  margin: 50px 150px;
 }
 
 .nav-bar {
@@ -120,9 +120,9 @@ header, .section1, .section2, .section3 {
 
 .grid-container{
     display: grid;
-    grid-template-columns: repeat(4, 230px);
-    row-gap: 25px;
-    column-gap: 25px;
+    grid-template-columns: repeat(4, 280px);
+    row-gap: 35px;
+    column-gap: 35px;
     align-items: center;
     justify-content: center;
 }
@@ -136,11 +136,11 @@ header, .section1, .section2, .section3 {
     transition: transform 0.2s ease;
 }
 .grid-img{
-    width: 230px;
+    width: 280px;
 }
 
 .grid-button{
-    width: 230px;
+    width: 280px;
     background-color: #E95A08;
     border: none;
     font-family: "Inter", sans-serif;
@@ -165,7 +165,7 @@ header, .section1, .section2, .section3 {
     margin-top: 190px;
 }
 
-.left, .right{
+.left{
     width: 540px;
     height: 597px;
 }
@@ -192,36 +192,118 @@ header, .section1, .section2, .section3 {
 
 .section3{
     display: flex;
+    align-items: center;
+    justify-content: center;
     flex-direction: column;
+    text-align: center;
+}
+
+.section3-container {
+    display: grid;
+    grid-template-columns: 1fr 2fr; 
+    grid-template-rows: 1fr 1fr; 
+    grid-template-areas:
+        "item1 item2"
+        "item3 item2";
+    gap: 20px; 
+    width: 90%;
+    margin-top: 20px;
+    font-family: "Noto Serif", serif;
+    font-weight: bold
+}
+
+.section3-container u{
+    font-family: "Inter", sans-serif;
+}
+
+.deal-item1 {
+    grid-area: item1;
+    background-image: url('./assets/deal-bloom.png');
+    background-size: cover;
+    background-position: center;
+    color: white;
+    padding: 20px;
+    border-radius: 10px;
+    display: flex;
     align-items: center;
     justify-content: center;
     text-align: center;
 }
 
-.section3-container{
-    display: grid;
-    grid-template-columns: repeat(2,370px);
-    column-gap: 20px;
-    row-gap: 20px;
-    color: white;
-}
-
-.deal-item1{
-    background-image: url('./assets/deal-bloom.png');
-}
-
-.deal-item2{
+.deal-item2 {
+    grid-area: item2;
     background-image: url('./assets/deal-zabo.png');
-    grid-row: span 2;
+    background-size: cover;
+    background-position: center;
+    color: white;
+    padding: 20px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-size: 30px;
 }
 
-.deal-item3{
-   background-image: url('./assets/deal-ana.png');
+.deal-item3 {
+    grid-area: item3;
+    background-image: url('./assets/deal-ana.png');
+    background-size: cover;
+    background-position: center;
+    color: white;
+    padding: 20px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
 }
+
+
+.section4{
+    background-image: url('./assets/news-letter-bg.png'); 
+    background-size: cover;
+    background-position: center;
+    padding: 100px 20px;
+    text-align: center;
+    color: white;
+    margin-top: 100px;
+}
+
+.subscribe {
+    display: flex;
+    justify-content: center;
+    max-width: 600px;
+    margin: 30px auto 0;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    background-color: white;
+}
+
+.subscribe input {
+    flex: 1;
+    padding: 15px;
+    border: none;
+    font-family: "Inter", sans-serif;
+    font-size: 1rem;
+    outline: none;
+    color: #333;
+}
+
+.subscribe button {
+    background-color: #f15a1f;
+    color: white;
+    padding: 15px 25px;
+    border: none;
+    font-size: 1rem;
+    font-family: "Inter", sans-serif;
+}
+
+
+
 
 @media screen and (max-width:768px){
     header, .section1, .section2, .section3 {
-     padding: 10px 16px;
+     margin: 10px 16px;
      align-items: center;
      justify-content: center;
      margin: 50px;
@@ -277,7 +359,17 @@ header, .section1, .section2, .section3 {
 
     .section3-container{
         display: grid;
-        grid-template-columns: repeat(1,360px);
+        grid-template-columns: 2fr;
+        grid-template-areas:
+            "item1"
+            "item2"
+            "item3";
     }
+    .deal-item1, .deal-item2 , .deal-item3 {
+        font-size: 18px;
+    }
+    
+    
+
 
 }
