@@ -227,7 +227,7 @@ header, .section1, .section2, .section3, .final-section {
 
 .deal-item1 {
     grid-area: item1;
-    background-image: url('./assets/deal-bloom.png');
+    background-image: linear-gradient(to top, rgba(0, 0, 0, 0.6)), url('./assets/deal-bloom.png');
     background-size: cover;
     background-position: center;
     color: white;
@@ -246,7 +246,7 @@ header, .section1, .section2, .section3, .final-section {
 
 .deal-item2 {
     grid-area: item2;
-    background-image: url('./assets/deal-zabo.png');
+    background-image: linear-gradient(to top, rgba(0, 0, 0, 0.6)), url('./assets/deal-zabo.png');
     background-size: cover;
     background-position: center;
     color: white;
@@ -266,7 +266,7 @@ header, .section1, .section2, .section3, .final-section {
 
 .deal-item3 {
     grid-area: item3;
-    background-image: url('./assets/deal-ana.png');
+    background-image: linear-gradient(to top, rgba(0, 0, 0, 0.6)), url('./assets/deal-ana.png');
     background-size: cover;
     background-position: center;
     color: white;
